@@ -63,10 +63,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{matrix.release.distro}}-${{matrix.os.arch}}-${{matrix.release.version}}-${{github.run_number}}
-          path: |
-            /home/runner/*.tar.xz
-            /home/runner/*.qcow2
-            /home/runner/*.squashfs
+          path: /home/runner/*
           retention-days: 5
 
   test:
