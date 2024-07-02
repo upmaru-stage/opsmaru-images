@@ -70,6 +70,7 @@ jobs:
           retention-days: 5
 
   test:
+    needs: build
     strategy:
       fail-fast: false
       matrix:
