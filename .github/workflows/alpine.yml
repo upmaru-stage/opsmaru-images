@@ -63,7 +63,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{matrix.release.distro}}-${{matrix.os.arch}}-${{matrix.release.version}}-${{github.run_number}}
-          path: /home/runner/*
+          path: |
+            ${{ github.workspace }}/incus.tar.xz
+            ${{ github.workspace }}/disk.qcow2
+            ${{ github.workspace }}/rootfs.squashfs
           retention-days: 5
 
   test:
