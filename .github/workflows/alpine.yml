@@ -109,5 +109,9 @@ jobs:
       - name: Test
         run: |
           icepak validate --serial ${{ steps.generate-serial.outputs.serial }}  --os ${{matrix.release.distro}} --arch ${{matrix.os.arch}} --release ${{matrix.release.version}} --variant default --checks ${{matrix.release.checks}}
-
+        shell: alpine.sh {0}
+        env:
+          POLAR_AUTH_TOKEN: ${{ secrets.POLAR_AUTH_TOKEN }}
+          POLAR_ENDPOINT: ${{ vars.POLAR_ENDPOINT }}
+          TESTING_IMAGE_SERVER: ${{ secrets.TESTING_IMAGE_SERVER }}
   
