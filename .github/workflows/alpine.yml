@@ -19,7 +19,7 @@ jobs:
           # {distro: "alpine", version: "edge"}
         ]
         os: [
-          # {arch: "aarch64", builder: "ubicloud-standard-2-arm"},
+          {arch: "aarch64", builder: "ubicloud-standard-2-arm"},
           {arch: "x86_64", builder: "warp-ubuntu-latest-x64-2x"}
         ]
 
@@ -72,6 +72,7 @@ jobs:
   test:
     needs: build
     strategy:
+      max-parallel: 1
       fail-fast: false
       matrix:
         release: [
@@ -83,7 +84,7 @@ jobs:
           # {distro: "alpine", version: "edge"}
         ]
         os: [
-          # {arch: "aarch64", builder: "ubicloud-standard-2-arm"},
+          {arch: "aarch64", builder: "ubicloud-standard-2-arm"},
           {arch: "x86_64", builder: "warp-ubuntu-latest-x64-2x"}
         ]
 
