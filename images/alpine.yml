@@ -1,11 +1,6 @@
 image:
   distribution: "alpinelinux"
 
-simplestream:
-  requirements:
-    - requirements:
-        secureboot: false
-
 source:
   downloader: alpinelinux-http
   same_as: 3.21
