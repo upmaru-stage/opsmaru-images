@@ -4,7 +4,7 @@ Build configuration for building and pushing incus / lxd images.
 
 ## Images
 
-Configured to build the following releases for 2 architectures  
+Configured to build the following releases for 2 architectures
 
 | OS | Releases | Architectures | Link |
 | ----------------- | ----------------- | ---------------- | ----------------- |
